@@ -34,7 +34,7 @@ namespace TechnicalService
 
         public T Load(ref int autoincrement)
         {
-            if (!File.Exists(filePath))
+            if (!File.Exists(filePath) || new FileInfo(filePath).Length == 0)
             {
                 var type = typeof(T);
                 var ctor = type.GetConstructor(Type.EmptyTypes);

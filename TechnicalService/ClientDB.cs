@@ -51,9 +51,8 @@ namespace TechnicalService
             (ClientStatus clientStatus)
         {
             return clients.
-                Where(s => s.Value.Status ==
-                clientStatus)?.
-                Select(s => s.Value).ToList();
+                Where(s => s.Value.Status == clientStatus)?. 
+                Select(s => s.Value).ToList();                        
         }
 
         public List<Client> GetClients()

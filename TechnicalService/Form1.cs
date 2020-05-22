@@ -66,14 +66,10 @@ namespace TechnicalService
                     new ListViewItem(request.Name);
                 row.SubItems.Add(request.DateCreate.ToString());
                 if (request.Closed)
-                    row.SubItems.Add(request.DateClose.ToString());
-                else
-                    row.SubItems.Add("");
-                row.SubItems.Add(statusDB.
-                    GetRequestStatusByID(request.StatusID).Name);
+                row.SubItems.Add(" ");
+                row.SubItems.Add(statusDB.GetRequestStatusByID(request.StatusID).Name);                                
                 row.SubItems.Add(request.Priority.ToString());
-                row.SubItems.Add(workerDB.
-                    GetWorkerByID(request.WorkerID).LastName);
+                row.SubItems.Add(workerDB. GetWorkerByID(request.WorkerID).LastName);                  
                 row.Tag = request;
                 listView1.Items.Add(row);
             }

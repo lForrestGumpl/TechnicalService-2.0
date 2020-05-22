@@ -16,11 +16,13 @@ namespace TechnicalService
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.ApplicationExit += Application_ApplicationExit;
             Application.Run(new Form1());
         }
         private static void Application_ApplicationExit(
            object sender, EventArgs e)
         {
+            ClientDB.GetInstance().Save();
             WorkerDB.GetInstance().Save();
             RequestDB.GetInstance().Save();
             RequestStatusDB.GetInstance().Save();

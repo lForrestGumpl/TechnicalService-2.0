@@ -33,6 +33,7 @@ namespace TechnicalService
             client.FirstName = textBox3.Text;
             client.LastName = textBox2.Text;
             client.Status = (ClientStatus)comboBox1.SelectedItem;
+            client.Phone = Convert.ToInt64(textBox4.Text);
             Close();
         }
     }

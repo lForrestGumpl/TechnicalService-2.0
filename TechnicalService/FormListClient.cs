@@ -15,14 +15,14 @@ namespace TechnicalService
         public FormListClient()
         {
             InitializeComponent();
-            //ShowListClient();
+            ShowListClient();
         }
 
         private void AddRequest_Click(object sender, EventArgs e)
         {
             new FormClientEdit().Show();
         }
-        void ShowLisClient()
+        void ShowListClient()
         {
             listView1.Items.Clear();
             var clients = ClientDB.GetInstance().
@@ -33,6 +33,7 @@ namespace TechnicalService
                     client.FirstName);
                 row.SubItems.Add(client.LastName);
                 row.SubItems.Add(client.Status.ToString());
+                row.SubItems.Add(client.Phone.ToString());
                 row.Tag = client;
                 listView1.Items.Add(row);
             }
