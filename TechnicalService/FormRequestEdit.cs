@@ -33,7 +33,7 @@ namespace TechnicalService
                 GetInstance().GetWorkerByID(
                 request.WorkerID);
             dateTimePicker1.Value = request.DateCreate;
-            button1.Enabled = !request.Closed;
+           
         }
         void SaveRequestChanges()
         {
@@ -65,5 +65,7 @@ namespace TechnicalService
             SaveRequestChanges();
             Close();
         }
+
+       
     }
 }

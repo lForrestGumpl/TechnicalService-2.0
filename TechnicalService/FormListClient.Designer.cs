@@ -128,6 +128,7 @@
             this.ClientSize = new System.Drawing.Size(712, 250);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormListClient";
             this.Text = "Клиентская База";
             this.panel1.ResumeLayout(false);

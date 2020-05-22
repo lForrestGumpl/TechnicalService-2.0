@@ -68,6 +68,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormRequestStatusCreate";
             this.Text = "Создание статуса заявки";
             this.ResumeLayout(false);

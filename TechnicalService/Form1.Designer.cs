@@ -313,6 +313,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.listView1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "Список заявок";
             this.menuStrip1.ResumeLayout(false);

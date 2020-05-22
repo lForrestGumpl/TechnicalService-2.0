@@ -129,6 +129,7 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormClientEdit";
             this.Text = "Редактирование клиента";
             this.Load += new System.EventHandler(this.FormClientEdit_Load);

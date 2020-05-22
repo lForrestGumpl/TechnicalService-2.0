@@ -10,6 +10,6 @@ namespace TechnicalService
     public enum ClientStatus
     {
         Постоянный,
-        WIP,
+        VIP,
     }
 }
