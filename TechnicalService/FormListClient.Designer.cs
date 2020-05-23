@@ -56,7 +56,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(12, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(688, 196);
+            this.listView1.Size = new System.Drawing.Size(540, 201);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -64,17 +64,17 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "Фамилия";
-            this.columnHeader2.Width = 205;
+            this.columnHeader2.Width = 146;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Имя";
-            this.columnHeader3.Width = 187;
+            this.columnHeader3.Width = 146;
             // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "Статус";
-            this.columnHeader1.Width = 172;
+            this.columnHeader1.Width = 129;
             // 
             // columnHeader4
             // 
@@ -87,7 +87,7 @@
             this.panel1.Controls.Add(this.Remove);
             this.panel1.Controls.Add(this.Edit);
             this.panel1.Controls.Add(this.AddRequest);
-            this.panel1.Location = new System.Drawing.Point(309, 212);
+            this.panel1.Location = new System.Drawing.Point(161, 219);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 32);
             this.panel1.TabIndex = 43;
@@ -125,7 +125,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(712, 250);
+            this.ClientSize = new System.Drawing.Size(564, 255);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

@@ -42,8 +42,20 @@ namespace TechnicalService
             return client;
         }
 
+        static Client defaultClient;
+
         public Client GetClientByID(int id)
         {
+
+            if (!clients.ContainsKey(id))
+            {
+                if (defaultClient == null)
+                {
+                    defaultClient = new Client(0);
+                    defaultClient.FirstName = "Клиент не указан";
+                }
+                return defaultClient;
+            }
             return clients[id];
         }
 

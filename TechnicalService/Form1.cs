@@ -26,6 +26,8 @@ namespace TechnicalService
             Priority.DataSource = typeof(RequestPriority).GetEnumValues();               
             worker.DataSource = WorkerDB.GetInstance().GetWorkers();               
             worker.DisplayMember = "LastName";
+            client.DataSource = ClientDB.GetInstance().GetClients();
+            client.DisplayMember = "LastName";
         }
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,8 +44,7 @@ namespace TechnicalService
 
         private void ApplyFilter_Click(object sender, EventArgs e)
         {
-            ArrayRequests result =
-               RequestDB.GetInstance().GetRequests();
+            ArrayRequests result = RequestDB.GetInstance().GetRequests();              
             if (checkBox1.Checked)
                 result = result.GetRequestsCreateBetweenDate(dateTimePicker1.Value);
             if (Status.SelectedIndex != -1)
@@ -51,7 +52,8 @@ namespace TechnicalService
             if (Priority.SelectedIndex != -1)
                 result = result.GetRequestsByPriority( (RequestPriority)Priority.SelectedItem);                   
             if (worker.SelectedIndex != -1)
-                result = result.GetRequestsByWorker((Worker)worker.SelectedItem);                    
+                result = result.GetRequestsByWorker((Worker)worker.SelectedItem);    
+            
             ShowRequests(result.requests);
         }
 

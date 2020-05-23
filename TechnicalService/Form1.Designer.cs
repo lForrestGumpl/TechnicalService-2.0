@@ -55,6 +55,8 @@
             this.Remove = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.client = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -77,7 +79,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(194, 33);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(687, 215);
+            this.listView1.Size = new System.Drawing.Size(687, 240);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -153,7 +155,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Location = new System.Drawing.Point(3, 129);
+            this.checkBox1.Location = new System.Drawing.Point(3, 176);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(158, 17);
             this.checkBox1.TabIndex = 22;
@@ -165,7 +167,7 @@
             // 
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 152);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 199);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(158, 20);
             this.dateTimePicker1.TabIndex = 24;
@@ -209,7 +211,7 @@
             // 
             // ResetTheFilter
             // 
-            this.ResetTheFilter.Location = new System.Drawing.Point(3, 224);
+            this.ResetTheFilter.Location = new System.Drawing.Point(3, 251);
             this.ResetTheFilter.Name = "ResetTheFilter";
             this.ResetTheFilter.Size = new System.Drawing.Size(158, 23);
             this.ResetTheFilter.TabIndex = 39;
@@ -237,7 +239,7 @@
             // 
             // ApplyFilter
             // 
-            this.ApplyFilter.Location = new System.Drawing.Point(3, 195);
+            this.ApplyFilter.Location = new System.Drawing.Point(3, 222);
             this.ApplyFilter.Name = "ApplyFilter";
             this.ApplyFilter.Size = new System.Drawing.Size(158, 23);
             this.ApplyFilter.TabIndex = 36;
@@ -271,7 +273,7 @@
             this.panel1.Controls.Add(this.Remove);
             this.panel1.Controls.Add(this.Edit);
             this.panel1.Controls.Add(this.AddRequest);
-            this.panel1.Location = new System.Drawing.Point(194, 254);
+            this.panel1.Location = new System.Drawing.Point(194, 280);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 32);
             this.panel1.TabIndex = 42;
@@ -289,6 +291,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.client);
             this.panel2.Controls.Add(this.Status);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label3);
@@ -301,7 +305,7 @@
             this.panel2.Controls.Add(this.ApplyFilter);
             this.panel2.Location = new System.Drawing.Point(12, 33);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 253);
+            this.panel2.Size = new System.Drawing.Size(165, 279);
             this.panel2.TabIndex = 43;
             // 
             // columnHeader3
@@ -309,12 +313,30 @@
             this.columnHeader3.Text = "Фамилия Клиента";
             this.columnHeader3.Width = 131;
             // 
+            // client
+            // 
+            this.client.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.client.FormattingEnabled = true;
+            this.client.Location = new System.Drawing.Point(3, 149);
+            this.client.Name = "client";
+            this.client.Size = new System.Drawing.Size(158, 21);
+            this.client.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 13);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Фамилия клинета";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(893, 300);
+            this.ClientSize = new System.Drawing.Size(893, 318);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -362,6 +384,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem клиентскаяБазаToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox client;
     }
 }
 
