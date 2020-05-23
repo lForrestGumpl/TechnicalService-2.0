@@ -54,6 +54,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Remove = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,12 +71,13 @@
             this.columnHeader2,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
+            this.columnHeader6,
+            this.columnHeader3});
             this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(194, 33);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(554, 215);
+            this.listView1.Size = new System.Drawing.Size(687, 215);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -112,7 +114,7 @@
             this.справочникиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(760, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(893, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -302,12 +304,17 @@
             this.panel2.Size = new System.Drawing.Size(165, 253);
             this.panel2.TabIndex = 43;
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Фамилия Клиента";
+            this.columnHeader3.Width = 131;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(760, 300);
+            this.ClientSize = new System.Drawing.Size(893, 300);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -354,6 +361,7 @@
         private System.Windows.Forms.Button Remove;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ToolStripMenuItem клиентскаяБазаToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
 

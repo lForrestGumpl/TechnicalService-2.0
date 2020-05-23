@@ -48,6 +48,15 @@ namespace TechnicalService
                 logger.Log(this);
             }
         }
+        public int ClientID
+        {
+            get => clientID;
+            set
+            {
+                clientID = value;
+                logger.Log(this);
+            }
+        }
 
         [NonSerialized]
         RequestLogger logger;
@@ -55,9 +64,10 @@ namespace TechnicalService
         private int statusID;
         private RequestPriority priority;
         private int workerID;
+        private int clientID;
 
-        public Request(int id, string name,
-            DateTime dateCreate)
+        public Request(int id, string name,DateTime dateCreate)
+            
         {
             ID = id;
             Name = name;

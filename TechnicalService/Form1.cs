@@ -60,6 +60,7 @@ namespace TechnicalService
             listView1.Items.Clear();
             RequestStatusDB statusDB = RequestStatusDB.GetInstance();
             WorkerDB workerDB = WorkerDB.GetInstance();
+            ClientDB clientDB = ClientDB.GetInstance();
             foreach (var request in requests)
             {
                 ListViewItem row =
@@ -69,7 +70,8 @@ namespace TechnicalService
                 row.SubItems.Add(" ");
                 row.SubItems.Add(statusDB.GetRequestStatusByID(request.StatusID).Name);                                
                 row.SubItems.Add(request.Priority.ToString());
-                row.SubItems.Add(workerDB. GetWorkerByID(request.WorkerID).LastName);                  
+                row.SubItems.Add(workerDB. GetWorkerByID(request.WorkerID).LastName);
+                row.SubItems.Add(clientDB.GetClientByID(request.ClientID).LastName);
                 row.Tag = request;
                 listView1.Items.Add(row);
             }
@@ -128,8 +130,8 @@ namespace TechnicalService
                 else if (Controls[i] is ComboBox)
                     ((ComboBox)Controls[i]).SelectedIndex = -1;
                 else if (Controls[i] is DateTimePicker)
-                    ((DateTimePicker)Controls[i]).Value =
-                        DateTime.Now;
+                    ((DateTimePicker)Controls[i]).Value = DateTime.Now;
+                       
             }
         }
     }

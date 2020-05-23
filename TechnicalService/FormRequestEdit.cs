@@ -26,34 +26,27 @@ namespace TechnicalService
             this.request = request;
             textBox1.Text = request.Name;
             comboBox1.SelectedItem = request.Priority;
-            comboBox2.SelectedItem = RequestStatusDB.
-                GetInstance().GetRequestStatusByID(
-                request.StatusID);
-            comboBox3.SelectedItem = WorkerDB.
-                GetInstance().GetWorkerByID(
-                request.WorkerID);
+            comboBox2.SelectedItem = RequestStatusDB.  GetInstance().GetRequestStatusByID( request.StatusID);                            
+            comboBox3.SelectedItem = WorkerDB.GetInstance().GetWorkerByID( request.WorkerID);                              
             dateTimePicker1.Value = request.DateCreate;
-           
+            comboBox4.SelectedItem = ClientDB.GetInstance().GetClientByID(request.ClientID);
         }
         void SaveRequestChanges()
         {
-            request.Priority = (RequestPriority)
-                comboBox1.SelectedItem;
-            request.StatusID = ((RequestStatus)
-                comboBox2.SelectedItem).ID;
-            request.WorkerID = ((Worker)
-                comboBox3.SelectedItem).ID;
+            request.Priority = (RequestPriority)comboBox1.SelectedItem;                
+            request.StatusID = ((RequestStatus)comboBox2.SelectedItem).ID;                
+            request.WorkerID = ((Worker)comboBox3.SelectedItem).ID;
+            request.ClientID = ((Client)comboBox4.SelectedItem).ID;    
         }
         void FillFilters()
         {
-            comboBox2.DataSource = RequestStatusDB.
-                    GetInstance().GetRequestStatuses();
+            comboBox2.DataSource = RequestStatusDB. GetInstance().GetRequestStatuses();                  
             comboBox2.DisplayMember = "Name";
-            comboBox1.DataSource = typeof(RequestPriority).
-                GetEnumValues();
-            comboBox3.DataSource = WorkerDB.GetInstance().
-                GetWorkers();
+            comboBox1.DataSource = typeof(RequestPriority).GetEnumValues();                
+            comboBox3.DataSource = WorkerDB.GetInstance(). GetWorkers();               
             comboBox3.DisplayMember = "LastName";
+            comboBox4.DataSource = ClientDB.GetInstance().GetClients();
+            comboBox4.DisplayMember = "LastName";
         }
 
         private void butttonSaveRequest_Click(object sender, EventArgs e)
