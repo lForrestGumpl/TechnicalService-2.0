@@ -47,12 +47,14 @@ namespace TechnicalService
             ArrayRequests result = RequestDB.GetInstance().GetRequests();              
             if (checkBox1.Checked)
                 result = result.GetRequestsCreateBetweenDate(dateTimePicker1.Value);
-            if (Status.SelectedIndex != -1)
+           else if (Status.SelectedIndex != -1)
                 result = result.GetRequestsByStatus((RequestStatus)Status.SelectedItem);                  
-            if (Priority.SelectedIndex != -1)
+          else  if (Priority.SelectedIndex != -1)
                 result = result.GetRequestsByPriority( (RequestPriority)Priority.SelectedItem);                   
-            if (worker.SelectedIndex != -1)
-                result = result.GetRequestsByWorker((Worker)worker.SelectedItem);    
+          else  if (worker.SelectedIndex != -1)
+                result = result.GetRequestsByWorker((Worker)worker.SelectedItem);
+          else  if (client.SelectedIndex != -1)
+                result = result.GetRequestsByClient((Client)client.SelectedItem);
             
             ShowRequests(result.requests);
         }

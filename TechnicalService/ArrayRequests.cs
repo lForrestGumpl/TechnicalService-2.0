@@ -30,7 +30,10 @@ namespace TechnicalService
         public ArrayRequests GetRequestsByWorker
             (Worker worker) =>
             new ArrayRequests(requests.FindAll(s => s.WorkerID == worker.ID));
-            
+        
+        public ArrayRequests GetRequestsByClient
+             (Client client) =>
+             new ArrayRequests(requests.FindAll(s => s.ClientID == client.ID));
 
         public ArrayRequests GetRequestsCreateBetweenDate
             (DateTime start) =>

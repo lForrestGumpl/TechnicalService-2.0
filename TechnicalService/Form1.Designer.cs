@@ -79,7 +79,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(194, 33);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(687, 240);
+            this.listView1.Size = new System.Drawing.Size(697, 240);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -116,7 +116,7 @@
             this.справочникиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(893, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(903, 24);
             this.menuStrip1.TabIndex = 20;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -155,7 +155,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.checkBox1.Location = new System.Drawing.Point(3, 176);
+            this.checkBox1.Location = new System.Drawing.Point(3, 169);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(158, 17);
             this.checkBox1.TabIndex = 22;
@@ -167,7 +167,7 @@
             // 
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 199);
+            this.dateTimePicker1.Location = new System.Drawing.Point(3, 192);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(158, 20);
             this.dateTimePicker1.TabIndex = 24;
@@ -211,7 +211,7 @@
             // 
             // ResetTheFilter
             // 
-            this.ResetTheFilter.Location = new System.Drawing.Point(3, 251);
+            this.ResetTheFilter.Location = new System.Drawing.Point(3, 250);
             this.ResetTheFilter.Name = "ResetTheFilter";
             this.ResetTheFilter.Size = new System.Drawing.Size(158, 23);
             this.ResetTheFilter.TabIndex = 39;
@@ -317,7 +317,7 @@
             // 
             this.client.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.client.FormattingEnabled = true;
-            this.client.Location = new System.Drawing.Point(3, 149);
+            this.client.Location = new System.Drawing.Point(3, 142);
             this.client.Name = "client";
             this.client.Size = new System.Drawing.Size(158, 21);
             this.client.TabIndex = 40;
@@ -325,7 +325,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 133);
+            this.label1.Location = new System.Drawing.Point(3, 126);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 41;
@@ -336,7 +336,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(893, 318);
+            this.ClientSize = new System.Drawing.Size(903, 318);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
