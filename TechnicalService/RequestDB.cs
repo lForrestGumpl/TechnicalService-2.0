@@ -45,5 +45,10 @@ namespace TechnicalService
         public ArrayRequests GetRequests() =>
             new ArrayRequests(requests);
 
+       public void RemoveRequest(Request request)
+        {
+            requests.Remove(request);
+        }
+
     }
 }

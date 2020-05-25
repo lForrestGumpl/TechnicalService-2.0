@@ -38,11 +38,10 @@ namespace TechnicalService
         public ArrayRequests GetRequestsCreateBetweenDate
             (DateTime start) =>
             new ArrayRequests(requests.FindAll(s => s.DateCreate >= start));
-               
 
-        public ArrayRequests GetRequestsCloseBetweenDate
-            (DateTime start, DateTime end) =>
-            new ArrayRequests(requests.FindAll(s => s.DateClose >= start && s.DateCreate <= end));
+      
+
+    
                 
     }
 }

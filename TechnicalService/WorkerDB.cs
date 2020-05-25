@@ -60,5 +60,9 @@ namespace TechnicalService
             return workers.
                 Select(s => s.Value)?.ToList();
         }
+        public void RemoveWorker(Worker worker)
+        {
+            workers.Remove(worker.ID);
+        }
     }
 }

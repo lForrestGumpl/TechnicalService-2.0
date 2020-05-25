@@ -38,5 +38,23 @@ namespace TechnicalService
                 listView1.Items.Add(row);
             }
         }
+
+        private void Remove_Click(object sender, EventArgs e)
+        {         
+            if (listView1.SelectedIndices.Count == 0)
+                return;
+           Client client = (Client)listView1.SelectedItems[0].Tag;
+            ClientDB.GetInstance().RemoveClient(client);
+            ShowListClient();
+        }
+
+        private void Edit_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count == 0)
+                return;
+            var client = (Client)listView1. SelectedItems[0].Tag;
+            new FormClientEdit(client).ShowDialog();
+            ShowListClient();
+        }
     }
 }

@@ -18,22 +18,7 @@ namespace TechnicalService
             ShowListWorkers();
         }
 
-        private void создатьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new FormWorkerEdit().ShowDialog();
-            ShowListWorkers();
-        }
-
-        private void редактироватьToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (listView1.SelectedIndices.Count == 0)
-                return;
-            var worker = (Worker)listView1.
-                SelectedItems[0].Tag;
-            new FormWorkerEdit(worker).ShowDialog();
-            ShowListWorkers();
-
-        }
+      
         void ShowListWorkers()
         {
             listView1.Items.Clear();
@@ -48,6 +33,31 @@ namespace TechnicalService
                 row.Tag = worker;
                 listView1.Items.Add(row);
             }
+        }
+
+        private void AddWorker_Click(object sender, EventArgs e)
+        {
+            new FormWorkerEdit().ShowDialog();
+            ShowListWorkers();
+        }
+
+        private void EditWorker_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count == 0)
+                return;
+            var worker = (Worker)listView1. SelectedItems[0].Tag;              
+            new FormWorkerEdit(worker).ShowDialog();
+            ShowListWorkers();
+
+        }
+
+        private void RemoveWorker_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count == 0)
+                return;
+            Worker worker = (Worker)listView1.SelectedItems[0].Tag;
+            WorkerDB.GetInstance().RemoveWorker(worker);
+            ShowListWorkers();
         }
     }
 }

@@ -19,6 +19,15 @@ namespace TechnicalService
             InitializeComponent();
             comboBox1.DataSource = typeof(ClientStatus).GetEnumValues();
         }
+        public FormClientEdit(Client client)
+        {
+            InitializeComponent();
+            comboBox1.DataSource = typeof(ClientStatus).GetEnumValues();
+            this.client = client;
+            textBox3.Text = client.FirstName;
+            textBox2.Text = client.LastName;
+           
+        }
 
         private void FormClientEdit_Load(object sender, EventArgs e)
         {

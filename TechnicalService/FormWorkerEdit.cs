@@ -30,17 +30,7 @@ namespace TechnicalService
                 comboBox1.SelectedItem = worker.Status;
             }
 
-            private void button1_Click(object sender, EventArgs e)
-            {
-                if (worker == null)
-                    worker = WorkerDB.GetInstance().
-                        CreateWorker();
-                worker.FirstName = textBox1.Text;
-                worker.LastName = textBox2.Text;
-                worker.Status = (WorkerStatus)comboBox1.SelectedItem;
-                  Close();  
-                
-            }
+           
 
         private void button1_Click_1(object sender, EventArgs e)
         {

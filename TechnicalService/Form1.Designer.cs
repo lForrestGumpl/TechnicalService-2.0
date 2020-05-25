@@ -34,6 +34,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сотрудникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,8 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.Priority = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Status = new System.Windows.Forms.ComboBox();
-            this.ResetTheFilter = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.worker = new System.Windows.Forms.ComboBox();
             this.ApplyFilter = new System.Windows.Forms.Button();
@@ -54,9 +54,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Remove = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.client = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.client = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -108,6 +108,11 @@
             // 
             this.columnHeader6.Text = "Исполнитель";
             this.columnHeader6.Width = 110;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Фамилия Клиента";
+            this.columnHeader3.Width = 131;
             // 
             // menuStrip1
             // 
@@ -200,24 +205,14 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Статус";
             // 
-            // Status
+            // comboBox1
             // 
-            this.Status.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Status.FormattingEnabled = true;
-            this.Status.Location = new System.Drawing.Point(3, 22);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(158, 21);
-            this.Status.TabIndex = 32;
-            // 
-            // ResetTheFilter
-            // 
-            this.ResetTheFilter.Location = new System.Drawing.Point(3, 250);
-            this.ResetTheFilter.Name = "ResetTheFilter";
-            this.ResetTheFilter.Size = new System.Drawing.Size(158, 23);
-            this.ResetTheFilter.TabIndex = 39;
-            this.ResetTheFilter.Text = "Сбросить фильтр";
-            this.ResetTheFilter.UseVisualStyleBackColor = true;
-            this.ResetTheFilter.Click += new System.EventHandler(this.ResetTheFilter_Click);
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(3, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(158, 21);
+            this.comboBox1.TabIndex = 32;
             // 
             // label5
             // 
@@ -291,13 +286,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.client);
-            this.panel2.Controls.Add(this.Status);
+            this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.checkBox1);
-            this.panel2.Controls.Add(this.ResetTheFilter);
             this.panel2.Controls.Add(this.Priority);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label4);
@@ -308,19 +303,15 @@
             this.panel2.Size = new System.Drawing.Size(165, 279);
             this.panel2.TabIndex = 43;
             // 
-            // columnHeader3
+            // button1
             // 
-            this.columnHeader3.Text = "Фамилия Клиента";
-            this.columnHeader3.Width = 131;
-            // 
-            // client
-            // 
-            this.client.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.client.FormattingEnabled = true;
-            this.client.Location = new System.Drawing.Point(3, 142);
-            this.client.Name = "client";
-            this.client.Size = new System.Drawing.Size(158, 21);
-            this.client.TabIndex = 40;
+            this.button1.Location = new System.Drawing.Point(3, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(158, 23);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "Сбросить фильтр";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -330,6 +321,15 @@
             this.label1.Size = new System.Drawing.Size(100, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "Фамилия клинета";
+            // 
+            // client
+            // 
+            this.client.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.client.FormattingEnabled = true;
+            this.client.Location = new System.Drawing.Point(3, 142);
+            this.client.Name = "client";
+            this.client.Size = new System.Drawing.Size(158, 21);
+            this.client.TabIndex = 40;
             // 
             // Form1
             // 
@@ -372,8 +372,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox Priority;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox Status;
-        private System.Windows.Forms.Button ResetTheFilter;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox worker;
         private System.Windows.Forms.Button ApplyFilter;
@@ -386,6 +385,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox client;
+        private System.Windows.Forms.Button button1;
     }
 }
 

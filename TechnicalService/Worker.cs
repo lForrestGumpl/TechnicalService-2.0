@@ -19,8 +19,6 @@ namespace TechnicalService
             ID = id;
         }
         public Worker(int id, string lastName, string firstName, WorkerStatus status) : this(id)
-
-
         {
             LastName = lastName;
             FirstName = firstName;

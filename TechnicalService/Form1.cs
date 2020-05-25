@@ -17,12 +17,13 @@ namespace TechnicalService
         {
             InitializeComponent();
             FillFilters();
+           
         }
 
         void FillFilters()
         {
-            Status.DataSource = RequestStatusDB.GetInstance().GetRequestStatuses();                   
-            Status.DisplayMember = "Name";
+            comboBox1.DataSource = RequestStatusDB.GetInstance().GetRequestStatuses();                   
+            comboBox1.DisplayMember = "Name";
             Priority.DataSource = typeof(RequestPriority).GetEnumValues();               
             worker.DataSource = WorkerDB.GetInstance().GetWorkers();               
             worker.DisplayMember = "LastName";
@@ -47,15 +48,14 @@ namespace TechnicalService
             ArrayRequests result = RequestDB.GetInstance().GetRequests();              
             if (checkBox1.Checked)
                 result = result.GetRequestsCreateBetweenDate(dateTimePicker1.Value);
-           else if (Status.SelectedIndex != -1)
-                result = result.GetRequestsByStatus((RequestStatus)Status.SelectedItem);                  
-          else  if (Priority.SelectedIndex != -1)
-                result = result.GetRequestsByPriority( (RequestPriority)Priority.SelectedItem);                   
-          else  if (worker.SelectedIndex != -1)
+            else if (comboBox1.SelectedIndex != -1)
+                result = result.GetRequestsByStatus((RequestStatus)comboBox1.SelectedItem);                  
+            else  if (Priority.SelectedIndex != -1)
+                result = result.GetRequestsByPriority((RequestPriority)Priority.SelectedItem);                   
+            else  if (worker.SelectedIndex != -1)
                 result = result.GetRequestsByWorker((Worker)worker.SelectedItem);
-          else  if (client.SelectedIndex != -1)
-                result = result.GetRequestsByClient((Client)client.SelectedItem);
-            
+            else  if (client.SelectedIndex != -1)
+                result = result.GetRequestsByClient((Client)client.SelectedItem);            
             ShowRequests(result.requests);
         }
 
@@ -67,8 +67,7 @@ namespace TechnicalService
             ClientDB clientDB = ClientDB.GetInstance();
             foreach (var request in requests)
             {
-                ListViewItem row =
-                    new ListViewItem(request.Name);
+                ListViewItem row = new ListViewItem(request.Name);                  
                 row.SubItems.Add(request.DateCreate.ToString());
                 if (request.Closed)
                 row.SubItems.Add(" ");
@@ -111,6 +110,13 @@ namespace TechnicalService
 
         private void Remove_Click(object sender, EventArgs e)
         {
+            if (listView1.SelectedIndices.Count == 0)
+                return;         
+            Request request = (Request)listView1.SelectedItems[0].Tag;
+            RequestDB.GetInstance().RemoveRequest(request);
+            FillFilters();
+
+
 
         }
 
@@ -125,7 +131,7 @@ namespace TechnicalService
 
         }
 
-        private void ResetTheFilter_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < Controls.Count; i++)
             {
@@ -135,6 +141,7 @@ namespace TechnicalService
                     ((ComboBox)Controls[i]).SelectedIndex = -1;
                 else if (Controls[i] is DateTimePicker)
                     ((DateTimePicker)Controls[i]).Value = DateTime.Now;
+                       
                        
             }
         }

@@ -100,6 +100,7 @@
             this.Remove.TabIndex = 42;
             this.Remove.Text = "Удалить";
             this.Remove.UseVisualStyleBackColor = true;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
             // Edit
             // 
@@ -109,6 +110,7 @@
             this.Edit.TabIndex = 41;
             this.Edit.Text = "Редактировать";
             this.Edit.UseVisualStyleBackColor = true;
+            this.Edit.Click += new System.EventHandler(this.Edit_Click);
             // 
             // AddRequest
             // 

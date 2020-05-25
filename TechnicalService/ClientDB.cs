@@ -72,5 +72,9 @@ namespace TechnicalService
             return clients.
                 Select(s => s.Value)?.ToList();
         }
+        public void RemoveClient(Client client)
+        {
+            clients.Remove(client.ID);
+        }
     }
 }
