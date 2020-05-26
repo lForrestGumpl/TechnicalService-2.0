@@ -133,14 +133,14 @@ namespace TechnicalService
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < Controls.Count; i++)
+            for (int i = 0; i < panel2.Controls.Count; i++)
             {
-                if (Controls[i] is CheckBox)
-                    ((CheckBox)Controls[i]).Checked = false;
-                else if (Controls[i] is ComboBox)
-                    ((ComboBox)Controls[i]).SelectedIndex = -1;
-                else if (Controls[i] is DateTimePicker)
-                    ((DateTimePicker)Controls[i]).Value = DateTime.Now;
+                if (panel2.Controls[i] is CheckBox)
+                    ((CheckBox)panel2.Controls[i]).Checked = false;
+             else  if (panel2.Controls[i] is ComboBox)
+                    ((ComboBox)panel2.Controls[i]).SelectedIndex = -1;
+            else   if (panel2.Controls[i] is DateTimePicker)
+                    ((DateTimePicker)panel2.Controls[i]).Value = DateTime.Now;
                        
                        
             }

@@ -54,7 +54,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Remove = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.client = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
@@ -286,7 +286,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.Reset);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.client);
             this.panel2.Controls.Add(this.comboBox1);
@@ -303,15 +303,15 @@
             this.panel2.Size = new System.Drawing.Size(165, 279);
             this.panel2.TabIndex = 43;
             // 
-            // button1
+            // Reset
             // 
-            this.button1.Location = new System.Drawing.Point(3, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 23);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "Сбросить фильтр";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Reset.Location = new System.Drawing.Point(3, 250);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(158, 23);
+            this.Reset.TabIndex = 42;
+            this.Reset.Text = "Сбросить фильтр";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -385,7 +385,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox client;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Reset;
     }
 }
 
