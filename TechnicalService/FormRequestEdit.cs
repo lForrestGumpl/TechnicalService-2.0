@@ -36,8 +36,8 @@ namespace TechnicalService
             request.Priority = (RequestPriority)comboBox1.SelectedItem;                
             request.StatusID = ((RequestStatus)comboBox2.SelectedItem).ID;                
             request.WorkerID = ((Worker)comboBox3.SelectedItem).ID;
-            request.ClientID = ((Client)comboBox4.SelectedItem).ID;  
-            
+            request.ClientID = ((Client)comboBox4.SelectedItem).ID;
+            textBox1.Text = request.Name;
         }
         void FillFilters()
         {

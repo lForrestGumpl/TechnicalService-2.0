@@ -11,5 +11,6 @@ namespace TechnicalService
     {
         Постоянный,
         VIP,
+        Новый,
     }
 }

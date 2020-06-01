@@ -29,6 +29,7 @@ namespace TechnicalService
             worker.DisplayMember = "LastName";
             client.DataSource = ClientDB.GetInstance().GetClients();
             client.DisplayMember = "LastName";
+           
         }
 
         private void сотрудникиToolStripMenuItem_Click(object sender, EventArgs e)
@@ -145,5 +146,7 @@ namespace TechnicalService
                        
             }
         }
+
+      
     }
 }

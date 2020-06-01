@@ -57,6 +57,7 @@
             this.Reset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.client = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -79,7 +80,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(194, 33);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(697, 240);
+            this.listView1.Size = new System.Drawing.Size(697, 251);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -268,7 +269,7 @@
             this.panel1.Controls.Add(this.Remove);
             this.panel1.Controls.Add(this.Edit);
             this.panel1.Controls.Add(this.AddRequest);
-            this.panel1.Location = new System.Drawing.Point(194, 280);
+            this.panel1.Location = new System.Drawing.Point(194, 290);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(391, 32);
             this.panel1.TabIndex = 42;
@@ -298,7 +299,7 @@
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.worker);
             this.panel2.Controls.Add(this.ApplyFilter);
-            this.panel2.Location = new System.Drawing.Point(12, 33);
+            this.panel2.Location = new System.Drawing.Point(12, 43);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(165, 279);
             this.panel2.TabIndex = 43;
@@ -331,12 +332,22 @@
             this.client.Size = new System.Drawing.Size(158, 21);
             this.client.TabIndex = 40;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(47, 27);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Фильры поиска";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(903, 318);
+            this.ClientSize = new System.Drawing.Size(903, 325);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -386,6 +397,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox client;
         private System.Windows.Forms.Button Reset;
+        private System.Windows.Forms.Label label2;
     }
 }
 
